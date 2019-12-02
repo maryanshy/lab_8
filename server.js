@@ -2,7 +2,8 @@ const express = require('express');
 const fetch = require('node-fetch');
 
 const app = express();
-const port = 5000;
+//const port = 5000;
+app.set('port', ((process.env.PORT || 5000));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
